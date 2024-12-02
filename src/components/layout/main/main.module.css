@@ -9,3 +9,9 @@
     width: 50%;
     padding: 10px;
 }
+
+.col_12 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
