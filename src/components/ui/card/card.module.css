@@ -1,0 +1,63 @@
+.card {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    height: 100%;
+
+
+}
+
+.card_figure {
+    width: 100%;
+    aspect-ratio: 2/1;
+}
+
+
+.red {
+    display: inline-block;
+    background-color: red;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.blue {
+    display: inline-block;
+    background-color: blue;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.yellow {
+    display: inline-block;
+    background-color: yellow;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.green {
+    display: inline-block;
+    background-color: green;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.card_img {
+    width: 100%;
+    aspect-ratio: 2/1;
+}
+
+.card_description {
+    text-wrap: wrap;
+    padding: 20px;
+}
+
+.card_description>*:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+.d_flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
