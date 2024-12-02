@@ -3,11 +3,10 @@ import Card from "../../ui/card/Card.jsx"
 import posts from "../../../data/posts.js"
 import { useState } from "react"
 export default function () {
-    const [newPostTitle, setNewPostTitle] = useState("ciao")
+    const [newPostTitle, setNewPostTitle] = useState("")
     const [postsArray, setPostsArray] = useState(posts)
     function addPost(e) {
         e.preventDefault();
-        console.log(newPostTitle)
         if (newPostTitle.trim() === "") return;
 
         const newPost = {
@@ -28,15 +27,15 @@ export default function () {
             <div className={style.row}>
                 <div className={style.col_12}>
                     <form onSubmit={addPost}>
-                        <input type="text" value={newPostTitle} placeholder="inserisci il titolo el post" onChange={(e) => { setNewPostTitle(e.target.value) }} />
-                        <button type="submit">AGGIUNGI POST</button>
+                        <input type="text" value={newPostTitle} placeholder="Inserisci il titolo del post" onChange={(e) => { setNewPostTitle(e.target.value) }} />
+                        <button className={style.btn_form} type="submit">AGGIUNGI POST</button>
                     </form>
                 </div>
                 {postsArray.map(post => (
                     post.published ?
                         <div className={style.col} key={post.id}>
                             <Card title={post.title} image={post.image} content={post.content} tags={post.tags} />
-                        </div> : ""
+                        </div> : null
 
                 ))}
             </div>
