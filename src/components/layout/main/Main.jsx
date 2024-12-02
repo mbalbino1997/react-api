@@ -21,6 +21,10 @@ export default function () {
         setPostsArray([...postsArray, newPost]);
         setNewPostTitle("");
     }
+    function deletePost(id) {
+        const updatedPosts = postsArray.filter(post => post.id !== id)
+        setPostsArray(updatedPosts);
+    }
 
     return (
         <div className="container">
@@ -35,6 +39,7 @@ export default function () {
                     post.published ?
                         <div className={style.col} key={post.id}>
                             <Card title={post.title} image={post.image} content={post.content} tags={post.tags} />
+                            <button className={style.btn_form} onClick={() => deletePost(post.id)}>ELIMINA</button>
                         </div> : null
 
                 ))}

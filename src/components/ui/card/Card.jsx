@@ -7,7 +7,7 @@ const tagColors = {
     php: style.green,
     js: style.yellow,
 }
-export default function ({ title = "", image, content = "", tags }) {
+export default function ({ title = "", image, content = "", tags = [] }) {
     return (
         <div className={style.card}>
             <figure className={style.card_figure}><img className={style.card_img} src={image || placeholder} alt={title} /></figure>
