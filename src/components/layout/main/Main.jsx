@@ -12,7 +12,7 @@ const initialFormData = {
 };
 const langTags = ["html", "css", "js", "php"];
 
-export default function PostsManager() {
+export default function Main() {
     const [postsArray, setPostsArray] = useState(posts);
     const [formData, setFormData] = useState(initialFormData);
 
