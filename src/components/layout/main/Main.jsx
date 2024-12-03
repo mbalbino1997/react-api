@@ -41,7 +41,17 @@ export default function () {
                         </div>
                         <div>
                             <label htmlFor="published">pubblicato</label>
-                            <input type="checkbox" checked={formData.published} id="published" name="published" value={formData.published} onChange={handleFormData} />
+                            <input type="checkbox" checked={formData.published} id="published" name="published" onChange={handleFormData} />
+                        </div>
+                        <div>
+                            <label htmlFor="html">HTML</label>
+                            <input type="checkbox" id="html" name="html" onChange={handleFormData} />
+                            <label htmlFor="css">CSS</label>
+                            <input type="checkbox" id="css" name="css" onChange={handleFormData} />
+                            <label htmlFor="js">Javascript</label>
+                            <input type="checkbox" id="js" name="js" onChange={handleFormData} />
+                            <label htmlFor="php">Php</label>
+                            <input type="checkbox" id="php" name="php" onChange={handleFormData} />
                         </div>
                         <button className={style.btn_form} type="submit">AGGIUNGI POST</button>
                     </form>
