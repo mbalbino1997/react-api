@@ -21,13 +21,13 @@ export default function Main() {
 
         if (e.target.name === "tags") {
             const index = parseInt(e.target.dataset.index, 10);
-            setFormData((prevFormData) => ({
-                ...prevFormData,
-                tags: prevFormData.tags.map((tag, i) => (i === index ? value : tag)),
+            setFormData((formData) => ({
+                ...formData,
+                tags: formData.tags.map((tag, i) => (i === index ? value : tag)),
             }));
         } else {
-            setFormData((prevFormData) => ({
-                ...prevFormData,
+            setFormData((formData) => ({
+                ...formData,
                 [e.target.name]: value,
             }));
         }
@@ -45,7 +45,7 @@ export default function Main() {
             tags: selectedTags,
         };
 
-        setPostsArray((prevPosts) => [...prevPosts, newPost]);
+        setPostsArray((postsArray) => [...postsArray, newPost]);
         setFormData(initialFormData);
     }
 
