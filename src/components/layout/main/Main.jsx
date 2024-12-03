@@ -5,7 +5,7 @@ import { useState } from "react"
 
 const initialFormData = {
     title: "",
-    content: "Lorem ipsum",
+    content: "",
     image: "",
     published: false,
 }
@@ -36,8 +36,12 @@ export default function () {
                 <div className={style.col_12}>
                     <form onSubmit={handleSubmit}>
                         <div>
-                            <label htmlFor="title">inserisci il titolo</label>
+                            <label htmlFor="title">inserisci il titolo:</label>
                             <input type="text" id="title" name="title" value={formData.title} placeholder="Inserisci il titolo del post" onChange={handleFormData} />
+                        </div>
+                        <div>
+                            <label htmlFor="content">inserisci il contenuto del post:</label>
+                            <input type="text" id="content" name="content" value={formData.content} placeholder="Descrizione del tuo post" onChange={handleFormData} />
                         </div>
                         <div>
                             <label htmlFor="image">inserisci l'URL dell'immagine</label>
