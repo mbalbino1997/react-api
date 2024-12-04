@@ -1,7 +1,8 @@
 import style from "./main.module.css";
 import Card from "../../ui/card/Card.jsx";
-import posts from "../../../data/posts.js";
-import { useState } from "react";
+import axios from "axios";
+// import posts from "../../../data/posts.js";
+import { useEffect, useState } from "react";
 
 const initialFormData = {
     title: "",
@@ -13,8 +14,18 @@ const initialFormData = {
 const langTags = ["html", "css", "js", "php"];
 
 export default function Main() {
-    const [postsArray, setPostsArray] = useState(posts);
+    const [postsArray, setPostsArray] = useState([]);
     const [formData, setFormData] = useState(initialFormData);
+    const BASE_URI = "http://localhost:3000"
+    useEffect(() => {
+        axios.get(`${BASE_URI}/posts`)
+            .then((res) => {
+                console.log(res.data)
+            })
+            .catch((err) => {
+                console.error("Errore nella richiesta", err.message);
+            });
+    })
 
     function handleFormData(e) {
         const value = e.target.type === "checkbox" ? e.target.checked : e.target.value;
