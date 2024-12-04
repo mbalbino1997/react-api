@@ -140,7 +140,7 @@ export default function Main() {
                     post.published && (
                         <div className={style.col} key={post.id}>
                             <Card
-                                URI={`${BASE_URI}`}
+                                URI={BASE_URI}
                                 title={post.title}
                                 image={post.image}
                                 content={post.content}
