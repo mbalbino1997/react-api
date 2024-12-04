@@ -70,8 +70,12 @@ export default function Main() {
     }
 
     function deletePost(id) {
-        const updatedPosts = postsArray.filter((post) => post.id !== id);
-        setPostsArray(updatedPosts);
+        axios.delete(`${BASE_URI}/posts/${id}`)
+            .then((res) => {
+                const updatedPosts = postsArray.filter((post) => post.id !== id);
+                setPostsArray(updatedPosts);
+
+            })
     }
 
     return (
