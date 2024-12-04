@@ -20,12 +20,12 @@ export default function Main() {
     useEffect(() => {
         axios.get(`${BASE_URI}/posts`)
             .then((res) => {
-                console.log(res.data)
+                setPostsArray(res.data)
             })
             .catch((err) => {
                 console.error("Errore nella richiesta", err.message);
             });
-    })
+    }, [])
 
     function handleFormData(e) {
         const value = e.target.type === "checkbox" ? e.target.checked : e.target.value;
