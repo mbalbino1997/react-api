@@ -58,9 +58,15 @@ export default function Main() {
             ...formData,
             tags: selectedTags,
         };
+        axios.post(`${BASE_URI}/posts`, newPost)
+            .then((res) => {
+                setPostsArray((postsArray) => [...postsArray, newPost]);
+                setFormData(initialFormData);
 
-        setPostsArray((postsArray) => [...postsArray, newPost]);
-        setFormData(initialFormData);
+            }).catch((err) => {
+                console.error("Errore nell'aggiunta del POST", err.message)
+            })
+
     }
 
     function deletePost(id) {
