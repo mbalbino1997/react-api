@@ -2,11 +2,12 @@
     font-size: 3rem;
     font-weight: bold;
     text-align: center;
+    color: #8d8b78;
 }
 
 header {
     padding: 20px 0;
-    background-color: rgba(25, 30, 31, 0.596);
+    background-color: rgb(14 41 79 / 67%);
     color: whitesmoke;
     text-transform: uppercase;
 }
