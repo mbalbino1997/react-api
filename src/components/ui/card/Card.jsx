@@ -8,9 +8,11 @@ const tagColors = {
     js: style.yellow,
 }
 export default function ({ title = "", image, content = "", tags = [], URI = "", onClick = () => { } }) {
+    const imagefiltered = image.includes("https") ? image : `${URI}/${image}`;
+
     return (
         <div className={style.card}>
-            <figure className={style.card_figure}><img className={style.card_img} src={image ? `${URI}/${image}` : placeholder} alt={title} /></figure>
+            <figure className={style.card_figure}><img className={style.card_img} src={image ? imagefiltered : placeholder} alt={title} /></figure>
             <div className={style.card_description}>
                 <h3>{title}</h3>
                 <div className={style.d_flex}>
