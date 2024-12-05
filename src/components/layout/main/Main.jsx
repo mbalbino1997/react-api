@@ -94,10 +94,9 @@ export default function Main() {
                                 onChange={handleFormData}
                             />
                         </div>
-                        <div>
+                        <div className={style.content_area}>
                             <label htmlFor="content">Inserisci il contenuto del post:</label>
-                            <input
-                                type="text"
+                            <textarea className={style.content_text}
                                 id="content"
                                 name="content"
                                 value={formData.content}
