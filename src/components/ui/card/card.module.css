@@ -4,6 +4,9 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     background-color: white;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 
 
 }
@@ -50,6 +53,10 @@
 .card_description {
     text-wrap: wrap;
     padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .card_description>*:not(:last-child) {
@@ -60,4 +67,30 @@
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
+}
+
+.btn_form {
+    padding: 5px 15px;
+    color: white;
+    background-color: rgba(166, 92, 92, 0.9);
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    margin-left: 50px;
+    font-family: 'Arial', sans-serif;
+    font-size: 14px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.btn_form:hover {
+    background-color: rgba(200, 70, 70, 0.9);
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+}
+
+
+.lower_card {
+    display: flex;
+    justify-content: space-between;
 }

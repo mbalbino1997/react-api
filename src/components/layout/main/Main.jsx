@@ -82,7 +82,7 @@ export default function Main() {
         <div className="container">
             <div className={style.row}>
                 <div className={style.col_12}>
-                    <form onSubmit={handleSubmit}>
+                    <form className={style.form} onSubmit={handleSubmit}>
                         <div>
                             <label htmlFor="title">Inserisci il titolo:</label>
                             <input
@@ -116,7 +116,7 @@ export default function Main() {
                                 onChange={handleFormData}
                             />
                         </div>
-                        <div>
+                        <div className={style.mr_auto}>
                             <label htmlFor="published">Pubblicato</label>
                             <input
                                 type="checkbox"
@@ -126,8 +126,9 @@ export default function Main() {
                                 onChange={handleFormData}
                             />
                         </div>
-                        <div>
+                        <div className={style.check_tags}>
                             {langTags.map((tag, index) => (
+
                                 <div key={tag}>
                                     <label htmlFor={tag}>{tag}</label>
                                     <input
@@ -155,13 +156,8 @@ export default function Main() {
                                 image={post.image}
                                 content={post.content}
                                 tags={post.tags}
-                            />
-                            <button
-                                className={style.btn_form}
                                 onClick={() => deletePost(post.id)}
-                            >
-                                Elimina
-                            </button>
+                            />
                         </div>
                     )
                 ))}

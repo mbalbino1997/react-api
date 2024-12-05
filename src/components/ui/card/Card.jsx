@@ -7,7 +7,7 @@ const tagColors = {
     php: style.green,
     js: style.yellow,
 }
-export default function ({ title = "", image, content = "", tags = [], URI = "" }) {
+export default function ({ title = "", image, content = "", tags = [], URI = "", onClick = () => { } }) {
     return (
         <div className={style.card}>
             <figure className={style.card_figure}><img className={style.card_img} src={image ? `${URI}/${image}` : placeholder} alt={title} /></figure>
@@ -19,7 +19,10 @@ export default function ({ title = "", image, content = "", tags = [], URI = "" 
                     ))}
                 </div>
                 <p>{content}</p>
-                <Button />
+                <div className={style.lower_card}>
+                    <Button />
+                    <button className={style.btn_form} onClick={onClick}>Elimina</button>
+                </div>
             </div>
         </div>
     )

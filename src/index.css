@@ -20,7 +20,7 @@ a {
 }
 
 body {
-  background-color: lightgrey;
+  background-color: rgb(155, 133, 133);
 }
 
 section {
@@ -29,5 +29,5 @@ section {
 }
 
 footer {
-  background-color: rgb(36, 34, 34);
+  background-color: rgb(20, 18, 18);
 }
