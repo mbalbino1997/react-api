@@ -3,6 +3,6 @@ import style from "./button.module.css"
 export default function Button() {
 
     return (
-        <button className={style.btn}>LEGGI DI PI&#217;</button>
+        <button className={style.btn}>leggi di più..</button>
     )
 }
